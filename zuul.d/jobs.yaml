@@ -121,6 +121,7 @@
       - name: openstack/masakari
       - name: openstack/masakari-monitors
       - name: openstack/mistral
+      - name: openstack/mistral-extra
       - name: openstack/murano
       - name: openstack/trove
       - name: openstack/trove-dashboard
@@ -151,6 +152,9 @@
       - ^setup\.(cfg|py)$
       - ^tox.ini$
       - ^Vagrantfile
+    vars:
+      #disable generation of ARA html report to reduce log upload time
+      ara_report_type: database
 
 # Ensuring overrides work
 - job:
@@ -199,6 +203,11 @@
 
 - job:
     name: openstack-ansible-deploy-aio_ceph-ubuntu-focal
+    parent: openstack-ansible-deploy-aio
+    nodeset: ubuntu-focal
+
+- job:
+    name: openstack-ansible-deploy-aio_nfs-ubuntu-focal
     parent: openstack-ansible-deploy-aio
     nodeset: ubuntu-focal
 
@@ -307,70 +316,6 @@
     name: openstack-ansible-deploy-translations-ubuntu-bionic
     parent: openstack-ansible-deploy-aio
     nodeset: ubuntu-bionic
-
-# centos 8
-- job:
-    name: openstack-ansible-deploy-aio_lxc-centos-8
-    parent: openstack-ansible-deploy-aio
-    nodeset: centos-8
-
-- job:
-    name: openstack-ansible-deploy-infra_lxc-centos-8
-    parent: openstack-ansible-deploy-aio
-    nodeset: centos-8
-
-- job:
-    name: openstack-ansible-deploy-aio_distro_lxc-centos-8
-    parent: openstack-ansible-deploy-aio
-    nodeset: centos-8
-
-- job:
-    name: openstack-ansible-deploy-aio_ceph-centos-8
-    parent: openstack-ansible-deploy-aio
-    nodeset: centos-8
-
-- job:
-    name: openstack-ansible-deploy-aio_distro_ceph-centos-8
-    parent: openstack-ansible-deploy-aio
-    nodeset: centos-8
-
-- job:
-    name: openstack-ansible-upgrade-aio_lxc-centos-8
-    parent: openstack-ansible-deploy-aio
-    nodeset: centos-8
-    timeout: 10800
-
-- job:
-    name: openstack-ansible-deploy-aio_metal-centos-8
-    parent: openstack-ansible-deploy-aio
-    nodeset: centos-8
-
-- job:
-    name: openstack-ansible-deploy-aio_telemetry_metal-centos-8
-    parent: openstack-ansible-deploy-aio
-    nodeset: centos-8
-
-- job:
-    name: openstack-ansible-deploy-aio_distro_metal-centos-8
-    parent: openstack-ansible-deploy-aio
-    nodeset: centos-8
-
-- job:
-    name: openstack-ansible-deploy-aio_nspawn-centos-8
-    parent: openstack-ansible-deploy-aio
-    nodeset: centos-8
-
-- job:
-    name: openstack-ansible-upgrade-aio_ceph-centos-8
-    parent: openstack-ansible-deploy-aio
-    nodeset: centos-8
-    timeout: 10800
-
-- job:
-    name: openstack-ansible-upgrade-aio_metal-centos-8
-    parent: openstack-ansible-deploy-aio
-    nodeset: centos-8
-    timeout: 10800
 
 # debian
 - job:
