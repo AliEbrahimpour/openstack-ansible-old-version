@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en-US" class="theme-">
+<head data-suburl="">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title> OpenDev: Free Software Needs Free Tools </title>
+	<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+	<meta name="theme-color" content="#ee265e">
+	<meta name="author" content="Gitea - Git with a cup of tea" />
+	<meta name="description" content="Gitea (Git with a cup of tea) is a painless self-hosted Git service written in Go" />
+	<meta name="keywords" content="go,git,self-hosted,gitea">
+	<meta name="referrer" content="no-referrer" />
+	<meta name="_csrf" content="BeQiRd-daJ7GAS2ly7rZceiwMqA6MTYyNTMxMzEyMzc5MzYzMzc5NA" />
+	
+	
+	
+
+	<script>
+		window.config = {
+			AppVer: 'v1.13.7',
+			AppSubUrl: '',
+			StaticUrlPrefix: '',
+			UseServiceWorker:  true ,
+			csrf: 'BeQiRd-daJ7GAS2ly7rZceiwMqA6MTYyNTMxMzEyMzc5MzYzMzc5NA',
+			HighlightJS: false,
+			SimpleMDE: false,
+			Tribute: false,
+			U2F: false,
+			Heatmap: false,
+			heatmapUser: null,
+			NotificationSettings: {
+				MinTimeout:  10000 ,
+				TimeoutStep:   10000 ,
+				MaxTimeout:  60000 ,
+				EventSourceUpdateTime:  10000 ,
+			},
+			PageIsProjects: false,
+      
+		};
+	</script>
+	<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+	<link rel="alternate icon" href="/img/favicon.png" type="image/png">
+	<link rel="mask-icon" href="/img/gitea-safari.svg" color="#609926">
+	<link rel="fluid-icon" href="/img/gitea-lg.png" title="OpenDev: Free Software Needs Free Tools">
+
+	<link rel="stylesheet" href="/css/index.css?v=1dc243fbd3bc481214e10ff6b80d1b36">
+	<noscript>
+		<style>
+			.dropdown:hover > .menu { display: block; }
+			.ui.secondary.menu .dropdown.item > .menu { margin-top: 0; }
+		</style>
+	</noscript>
+	<style class="list-search-style"></style>
+
+	<meta property="og:title" content="OpenDev: Free Software Needs Free Tools">
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="/img/gitea-lg.png" />
+	<meta property="og:url" content="https://opendev.org/" />
+	<meta property="og:description" content="Gitea (Git with a cup of tea) is a painless self-hosted Git service written in Go">
+
+<meta property="og:site_name" content="OpenDev: Free Software Needs Free Tools" />
+
+
+</head>
+<body>
+	
+
+	<div class="full height">
+		<noscript>This website works better with JavaScript.</noscript>
+
+		
+
+		
+			<div class="ui top secondary stackable main menu following bar light">
+				<div class="ui container" id="navbar">
+	<div class="item brand" style="justify-content: space-between;">
+		<a href="/">
+			<img class="ui mini image" src="/img/opendev-sm.png">
+		</a>
+		<div class="ui basic icon button mobile-only" id="navbar-expand-toggle">
+			<i class="sidebar icon"></i>
+		</div>
+	</div>
+
+	
+		<a class="item active" href="/">Home</a>
+		<a class="item " href="/explore/repos">Explore</a>
+	
+
+	
+
+	
+
+
+	
+		<a class="item" target="_blank" rel="noopener noreferrer" href="https://docs.opendev.org/opendev/infra-manual/latest/gettingstarted.html">Get Started</a>
+		<div class="right stackable menu">
+			
+		</div>
+	
+</div>
+
+			</div>
+		
+
+
+<div class="home">
+    <div class="ui stackable middle very relaxed page grid">
+        <div class="sixteen wide center aligned centered column">
+            <div class="hero" id="opendev">
+                <img alt="OpenDev" class="logo" src="/img/opendev.svg" />
+            </div>
+        </div>
+        <div class="four wide center aligned centered column">
+            <div><img alt="Gitea" src="/img/git.svg" width="60"></div>
+            <a href="https://opendev.org/explore/organizations">Code hosting</a>
+            </div>
+            <div class="four wide center aligned centered column">
+                <div><img alt="Gerrit" src="/img/gerrit.svg" width="60"></div>
+                <a href="https://review.opendev.org/">Code review</a>
+            </div>
+            <div class="four wide center aligned centered column">
+                <div><img alt="Zuul CI" src="/img/zuul.svg" width="60"></div>
+                <a href="https://zuul.opendev.org/">Continuous integration</a>
+            </div>
+            <div class="four wide center aligned centered column">
+                <div><img alt="Etherpad" src="/img/etherpad.svg" width="60"></div>
+                <a href="https://etherpad.opendev.org/">Collaborative editing</a>
+            </div>
+        </div>
+
+        <div class="ui stackable middle very relaxed page grid">
+            <div class="sixteen wide left aligned centered column">
+                <h2 id="what-is-opendev">What is OpenDev?</h2>
+                    <p>OpenDev is a collaboratory for open source software
+development at scale. Its focus is on code review, continuous
+integration, and project hosting provided exclusively through open source
+solutions like Git, Gerrit, Zuul, and Gitea. It also provides a number of
+peripheral collaboration services (like Mailman mailing lists, IRC bots for
+notifications and annotating text-based meetings, Jitsi-Meet for
+videoconference discussions integrated with Etherpad for collective text
+editing). All of these services are openly operated by the community, and
+continuously integrated and deployed using OpenDev itself.</p>
+
+                <h2 id="opendev-is-different">How is development different with OpenDev</h2>
+                    <p>OpenDev doesn't use a pull request (or merge request)
+workflow, like those implemented by GitHub or Gitlab. Instead it follows
+Gerrit's iterative change proposal workflow, which results in a slightly
+different experience.</p>
+                    <p>In GitHub or Gitlab, contribution typically starts by
+forking a personal copy of the original repository, cloning that locally, and
+pushing one or more commits to that personal fork. Once your code seems ready
+to merge, you ask the service to create a pull request for your branch into the
+original repository. The pull request is reviewed, and if accepted your changes
+get merged into the original repository. If not, you push more commits to your
+fork and update the request seeking more reviews.</p>
+                    <p>By contrast, contribution with Gerrit starts by cloning
+the original repository locally. You iterate on development of one or more
+local commits, and then use git push (or the git-review tool) to propose your
+commits as a series of changes to the Gerrit code review service. Each change
+in the series is reviewed, and if it's accepted (and passing tests) then it
+gets merged into the original repository. If more work is needed, you amend
+the same commits and push new versions of them for re-review.</p>
+                    <p>The difference is subtle, but significant. In the
+pull request model, you create a fork of the original repository, push
+changes to it, and ultimately propose to merge changes back. In the change
+proposal model, you prepare a change, and propose it. You do not create a
+complete fork and everyone contributes into the same original repository with
+what are basically lightweight, ephemeral topic branches. It results in less
+fragmentation overall, and avoids confusion between the original repository and
+its numerous forks.</p>
+                    <p>That high-level difference also affects lower-level
+details. A pull request may contain several commits, and if merged all those
+commits will appear in the original repository history. In Gerrit, every commit
+is a separate change (optionally depending on other related changes) for code
+reviewers to review, so developers squash or amend edits made while developing
+to represent the desired final state of that change. Each prior revision of a
+change is still retained by the service, as are all the review comments, so
+updates can be compared side-by-side for a clear picture of how the change
+evolved. It generally results in easier code review, but also a cleaner branch
+history with the commit messages reviewed as an integral part of each
+change.</p>
+                    <p>In summary, the Gerrit workflow, its user experience and
+UI are different from the pull request workflow. While it may not be
+immediately familiar to developers used to pull request workflows, it's worth
+learning. Long-term benefits outweigh the short-term cost of having to learn a
+new tool, especially for someone who is going to spend a lot of time developing
+for that project anyway.</p>
+
+                <h2 id="integrated-ci">Integrated Continuous Integration</h2>
+                    <p>One key benefit of OpenDev is that it integrates
+powerful continuous integration features, made possible by the donation of
+compute resources from our generous infrastructure partners. Test jobs are
+run when changes are proposed and provide code reviewers with valuable
+information. Test jobs also run again at merge time, in case recently approved
+changes introduce an incompatibility, preventing code which doesn't pass tests
+from merging to the repository.</p>
+                    <p>Advanced Zuul features like speculative execution of
+tests allow the testing of sequenced changes in parallel, so development
+velocity is rarely limited by how thorough you want your tests to be. Changes
+in one Git repository can depend on proposed changes in another repository,
+allowing integration testing of features actively developed across multiple
+projects, removing artificial barriers between development teams.</p>
+                    <p>This advanced continuous integration system was
+developed to sustain the complexity and scale of OpenStack development, one of
+the three most actively developed open source projects in the world. OpenDev
+makes this system available to other projects, enabling open development at
+scale for everyone.</p>
+
+                <h2 id="free-tools">Free software needs free tools</h2>
+                    <p>Finally, another key difference between OpenDev and
+other development infrastructure services like GitHub or Gitlab.com is that
+it's built purely using open source software. GitHub and Gitlab.com are
+provided free of charge for open source projects, but they are both implemented
+using proprietary code. If development of your free and open source software
+requires interaction with proprietary code, is it truly free (as in
+freedom)?</p>
+                    <p>It is widely accepted today that using open source
+technology reduces your reliance on outside parties and enables innovation. It
+should be obvious that developing software by using open source toolchains has
+the same effect. Nothing prevents a service provider from changing its terms of
+service, creating new limitations, blocking access for contributors connecting
+from specific countries, or even fully removing your project. Proprietary
+development services create the same form of hard limits, lock-in and
+dependency that proprietary software does, and prevent open innovation in the
+development infrastructure space.</p>
+                    <p>OpenDev is entirely built using open source software,
+but goes one step beyond: it is also openly operated. Even its operation
+tooling and configuration is open source, lives in Git, and is
+continuously-deployed. It serves as a clear example of transparent
+collaboration for systems administration. Like free and open source software,
+it requires engaging with its community to get the most of it -- OpenDev is not
+a service you consume, it's a community you join. That can be a bit
+overwhelming if you just want to focus on development, especially when
+ready-to-consume services are available. But it's worth it, especially if you
+want to have a say in what services are provided, or just support the idea of
+improving open source tools in that space.</p>
+
+                <h2 id="faq">FAQ</h2>
+
+                    <h3 id="isnt-this-just-openstack-infrastructure-rebranded">Isn’t this just OpenStack Infrastructure rebranded?</h3>
+                    <p>It is more than that. We want to make this toolset
+available to others that would find it helpful. OpenStack is one of the OpenDev
+tenants, but other tenants like Zuul or $gizmo would be just as important.</p>
+
+                    <h3 id="can-i-host-my-project-on-opendev">Can I host my project on OpenDev?</h3>
+                    <p>Yes! However, as noted above it is still early days yet
+and the early experience might be a bit bumpy. Certain things may still say
+“OpenStack” on them as we figure out the transition. And while any moves should
+come with appropriate redirects, we may have some inadvertent misses.</p>
+
+                    <h3 id="can-i-run-tests-on-windows-or-osx-machines">Can I run tests on Windows or OSX machines?</h3>
+                    <p>Currently all of our test resources are Linux based.
+Adding additional platforms would likely require someone to help us get that
+running, but Zuul will support systems with ansible connection plugins.
+Talk to us!</p>
+
+                    <h3 id="i-am-an-existing-openstack-infra-user-do-i-need-to-do-anything">I am an existing OpenStack Infra user do I need to do anything?</h3>
+                    <p>No. We’ll continue to communicate changes as they
+happen. We’ll also do our best to make this as smooth a transition as
+possible. If we run into situations that force us to break something we’ll
+be sure to let you know at that point.</p>
+
+                    <h3 id="is-a-cla-required-for-hosted-repos">Is a CLA required for hosted repos?</h3>
+                    <p>No.</p>
+
+                    <h3 id="what-if-i-dont-like-gerrit-and-would-prefer-insert-tool-here">What if I don’t like Gerrit and would prefer (insert tool here)?</h3>
+                    <p>We’ve got a fair bit of experience with the existing
+toolset and adding new tools for which we’ve already got an answer is currently
+out of scope. We think the existing tools (like Gerrit) work well, and should
+only get better as we update them. The system is able to scale because we do
+not need multiple implementations of different software that solve similar
+problems.</p>
+
+                    <h3 id="why-cant-we-use-giteas-issue-tracker-and-wiki">Why can't we use Gitea's issue tracker and wiki?</h3>
+                    <p>For scaling and redundancy purposes we are actually
+running a number of independent Giteas behind a load balancer. We can keep
+Git repos in sync from Gerrit reasonably well, but the issue tracker and
+wiki functionality would need another level of state syncing. Once Gitea
+can be run as a proper cluster this may change, but until then the
+functionality is limited.</p>
+
+                <h2 id="contact-info">Contact info</h2>
+                    <ul>
+                        <li>IRC #opendev on OFTC (<a href="https://meetings.opendev.org/irclogs/%23opendev/">logs</a>)</li>
+                        <li>Mailing list: service-discuss@lists.opendev.org (<a href="http://lists.opendev.org/cgi-bin/mailman/listinfo/service-discuss">subscribe</a>)</li>
+                        <li>Important announcements: service-announce@lists.opendev.org (<a href="http://lists.opendev.org/cgi-bin/mailman/listinfo/service-announce">subscribe</a>)</li>
+                    </ul>
+
+                <h2 id="service-vulnerabilities">Service vulnerabilities</h2>
+                    <p>If you find or suspect a security issue with any OpenDev services, please inform the administrators via email at <a href="mailto:service-incident@lists.opendev.org">service-incident@lists.opendev.org</a>.</p>
+            </div>
+      </div>
+</div>
+
+
+	
+
+	</div>
+
+	
+
+	<footer>
+	<div class="ui container">
+		<div class="ui left">
+			Powered by Gitea Version: v1.13.7 Page: <strong>0ms</strong> Template: <strong>0ms</strong>
+		</div>
+		<div class="ui right links">
+			
+			<div class="ui language bottom floating slide up dropdown link item">
+				<i class="world icon"></i>
+				<div class="text">English</div>
+				<div class="menu language-menu">
+					
+						<a lang="en-US" data-url="/?lang=en-US" class="item active selected">English</a>
+					
+						<a lang="zh-CN" data-url="/?lang=zh-CN" class="item ">简体中文</a>
+					
+						<a lang="zh-HK" data-url="/?lang=zh-HK" class="item ">繁體中文（香港）</a>
+					
+						<a lang="zh-TW" data-url="/?lang=zh-TW" class="item ">繁體中文（台灣）</a>
+					
+						<a lang="de-DE" data-url="/?lang=de-DE" class="item ">Deutsch</a>
+					
+						<a lang="fr-FR" data-url="/?lang=fr-FR" class="item ">français</a>
+					
+						<a lang="nl-NL" data-url="/?lang=nl-NL" class="item ">Nederlands</a>
+					
+						<a lang="lv-LV" data-url="/?lang=lv-LV" class="item ">latviešu</a>
+					
+						<a lang="ru-RU" data-url="/?lang=ru-RU" class="item ">русский</a>
+					
+						<a lang="uk-UA" data-url="/?lang=uk-UA" class="item ">Українська</a>
+					
+						<a lang="ja-JP" data-url="/?lang=ja-JP" class="item ">日本語</a>
+					
+						<a lang="es-ES" data-url="/?lang=es-ES" class="item ">español</a>
+					
+						<a lang="pt-BR" data-url="/?lang=pt-BR" class="item ">português do Brasil</a>
+					
+						<a lang="pt-PT" data-url="/?lang=pt-PT" class="item ">Português de Portugal</a>
+					
+						<a lang="pl-PL" data-url="/?lang=pl-PL" class="item ">polski</a>
+					
+						<a lang="bg-BG" data-url="/?lang=bg-BG" class="item ">български</a>
+					
+						<a lang="it-IT" data-url="/?lang=it-IT" class="item ">italiano</a>
+					
+						<a lang="fi-FI" data-url="/?lang=fi-FI" class="item ">suomi</a>
+					
+						<a lang="tr-TR" data-url="/?lang=tr-TR" class="item ">Türkçe</a>
+					
+						<a lang="cs-CZ" data-url="/?lang=cs-CZ" class="item ">čeština</a>
+					
+						<a lang="sr-SP" data-url="/?lang=sr-SP" class="item ">српски</a>
+					
+						<a lang="sv-SE" data-url="/?lang=sv-SE" class="item ">svenska</a>
+					
+						<a lang="ko-KR" data-url="/?lang=ko-KR" class="item ">한국어</a>
+					
+				</div>
+			</div>
+			<a href="/js/licenses.txt">Licenses</a>
+			<a href="/api/swagger">API</a>
+			<a target="_blank" rel="noopener noreferrer" href="https://gitea.io">Website</a>
+			
+			<span class="version">Go1.15.13</span>
+		</div>
+	</div>
+</footer>
+
+
+
+
+
+
+	<script src="/js/index.js?v=1dc243fbd3bc481214e10ff6b80d1b36"></script>
+
+</body>
+</html>
+
